@@ -1,3 +1,5 @@
+# Sprint_7
+
 #Проект тестов сервиса Яндекс Самокат
 
 #Сервис http://qa-scooter.praktikum-services.ru/
@@ -24,6 +26,5 @@ Gson
 Lombok
 
 #Локальное создание отчета Allure
-
 1. Запустить тесты в терминале командой mvn clean tes
 2. Открыть отчет Allure командой mvn allure:serve
