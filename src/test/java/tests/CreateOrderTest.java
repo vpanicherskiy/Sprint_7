@@ -7,6 +7,7 @@ import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import steps.OrderStep;
@@ -44,5 +45,10 @@ public class CreateOrderTest {
         MatcherAssert.assertThat("Не удалось создать заказ",
                 createOrderResponse.getTrack(),
                 Matchers.notNullValue());
+    }
+
+    @After
+    public void cancelOrder() {
+        orderStep.cancelOrder(createOrderResponse.getTrack(), BaseResponseSpecification.SC_OK);
     }
 }
